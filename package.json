@@ -13,5 +13,8 @@
     "algorithms"
   ],
   "author": "Daniel Cortes Pichardo",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.1.3"
+  }
 }
