@@ -1,0 +1,17 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Best algorithms ever",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "algorithms"
+  ],
+  "author": "Daniel Cortes Pichardo",
+  "license": "ISC"
+}
