@@ -1,6 +1,27 @@
+const assert = require('assert');
 const { sort } = require('../sort/quick-sort');
-const { data } = require('../sort/util');
+const { empty, distData, ascData, desData } = require('../sort/util');
 
-console.log(data);
-sort(data);
-console.log(data);
+describe('Heap sort algorithm', () => {
+
+    it('Empty', () => {
+        sort(empty)
+        assert.deepEqual(empty, []);
+    });
+
+    it('Distributed', () => {
+        sort(distData)
+        assert.deepEqual(distData, ascData);
+    });
+
+    it('Ascending', () => {
+        sort(ascData)
+        assert.deepEqual(ascData, ascData);
+    });
+
+    it('Descending', () => {
+        sort(desData)
+        assert.deepEqual(desData, ascData);
+    });
+
+});
