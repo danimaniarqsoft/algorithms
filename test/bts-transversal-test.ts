@@ -1,16 +1,34 @@
-
-import { BST } from "../src/model/BTS";
-import { Node } from "../src/model/Node";
-import { empty, distData, ascData, desData } from "../src/sort/util";
-
-
+import assert = require("assert");
+import { PreOrderTraversal } from "../src/traversal/PreOrderTraversal"
+import { InOrderTraversal } from "../src/traversal/InOrderTraversal"
+import { PostOrderTraversal } from "../src/traversal/PostOrderTraversal"
+import { preOrderData, inOrderData, posOrderData, tree } from "./TestUtil";
 
 
 describe('BST Traversal', () => {
 
-    let tree = new BST();
-    tree.add(12).add(13).add(2).add(3).add(78).add(53).add(1);
+    it('Pre order', () => {
+        let result: number[] = [];
+        new PreOrderTraversal().traverse(tree.root, (value) => {
+            result.push(value);
+        });
+        assert.deepEqual(result, preOrderData);
+    });
 
-    console.log(JSON.stringify(tree.root, null, 4));
+    it('In order', () => {
+        let result: number[] = [];
+        new InOrderTraversal().traverse(tree.root, (value) => {
+            result.push(value);
+        });
+        assert.deepEqual(result, inOrderData);
+    });
+
+    it('Pos order', () => {
+        let result: number[] = [];
+        new PostOrderTraversal().traverse(tree.root, (value) => {
+            result.push(value);
+        });
+        assert.deepEqual(result, posOrderData);
+    });
 
 });
