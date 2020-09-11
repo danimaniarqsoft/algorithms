@@ -1,26 +1,29 @@
-const assert = require('assert');
-const { sort } = require('../sort/merge-sort');
-const { empty, distData, ascData, desData } = require('../sort/util');
+import assert = require("assert");
+import { empty, distData, ascData, desData } from "../src/sort/util";
+import { MergeSort } from "../src/sort/merge-sort";
+import { Sortable } from "../src/model/Sortable";
+
+let sort: Sortable = new MergeSort();
 
 describe('Merge sort algorithm', () => {
 
     it('Empty', () => {
-        sort(empty)
+        sort.sort(empty)
         assert.deepEqual(empty, []);
     });
 
     it('Distributed', () => {
-        sort(distData)
+        sort.sort(distData)
         assert.deepEqual(distData, ascData);
     });
 
     it('Ascending', () => {
-        sort(ascData)
+        sort.sort(ascData)
         assert.deepEqual(ascData, ascData);
     });
 
     it('Descending', () => {
-        sort(desData)
+        sort.sort(desData)
         assert.deepEqual(desData, ascData);
     });
 

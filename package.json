@@ -2,12 +2,12 @@
   "name": "algorithms",
   "version": "1.0.0",
   "description": "Best algorithms ever",
-  "main": "index.js",
+  "main": "dist/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -r ts-node/register 'test/**/*.ts'"
   },
   "keywords": [
     "algorithms"
@@ -15,6 +15,16 @@
   "author": "Daniel Cortes Pichardo",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^8.1.3"
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.3",
+    "@types/node": "^14.6.4",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "ts-node": "^9.0.0",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
   }
 }
