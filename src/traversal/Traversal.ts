@@ -2,6 +2,6 @@ import { Node } from "@/model/Node";
 
 export interface Traversal {
 
-    traverse(node: Node, action: (value: number) => void): void
+    traverse(node: Node, visit: (node: Node) => void): void
 
 }
