@@ -1,11 +1,11 @@
 import assert = require("assert");
-import { empty, distData, ascData, desData } from "../src/sort/util";
-import { HeapSort } from "../src/sort/heap-sort";
-import { Sortable } from "../src/model/Sortable";
+import { Quicksort } from '../../src/sort/quick-sort';
+import { empty, distData, ascData, desData } from "../../src/sort/util";
+import { Sortable } from "../../src/model/Sortable";
 
-let sort: Sortable = new HeapSort();
+let sort: Sortable = new Quicksort();
 
-describe('Heap sort algorithm', () => {
+describe('Quick sort algorithm', () => {
 
     it('Empty', () => {
         sort.sort(empty)

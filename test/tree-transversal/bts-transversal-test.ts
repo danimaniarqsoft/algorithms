@@ -1,8 +1,8 @@
 import assert = require("assert");
-import { PreOrderTraversal } from "../src/traversal/PreOrderTraversal"
-import { InOrderTraversal } from "../src/traversal/InOrderTraversal"
-import { PostOrderTraversal } from "../src/traversal/PostOrderTraversal"
-import { preOrderData, inOrderData, posOrderData, tree } from "./TestUtil";
+import { PreOrderTraversal } from "../../src/traversal/PreOrderTraversal"
+import { InOrderTraversal } from "../../src/traversal/InOrderTraversal"
+import { PostOrderTraversal } from "../../src/traversal/PostOrderTraversal"
+import { preOrderData, inOrderData, posOrderData, tree } from "../TestUtil";
 
 
 describe('BST Traversal', () => {

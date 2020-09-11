@@ -34,6 +34,11 @@ export class Quicksort implements Sortable {
         }
     }
 
+    /**
+     * Take -> O( n log n )
+     * 
+     * @param arr 
+     */
     sort(arr: number[]) {
         this.quicksort(arr, 0, arr.length - 1);
     }

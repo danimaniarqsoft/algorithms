@@ -1,11 +1,11 @@
 import assert = require("assert");
-import { empty, distData, ascData, desData } from "../src/sort/util";
-import { MergeSort } from "../src/sort/merge-sort";
-import { Sortable } from "../src/model/Sortable";
+import { empty, distData, ascData, desData } from "../../src/sort/util";
+import { HeapSort } from "../../src/sort/heap-sort";
+import { Sortable } from "../../src/model/Sortable";
 
-let sort: Sortable = new MergeSort();
+let sort: Sortable = new HeapSort();
 
-describe('Merge sort algorithm', () => {
+describe('Heap sort algorithm', () => {
 
     it('Empty', () => {
         sort.sort(empty)

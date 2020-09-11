@@ -1,7 +1,7 @@
 import assert = require("assert");
-import { empty, distData, ascData, desData } from "../src/sort/util";
-import { CountingSort } from "../src/sort/counting-sort";
-import { Sortable } from "../src/model/Sortable";
+import { empty, distData, ascData, desData } from "../../src/sort/util";
+import { CountingSort } from "../../src/sort/counting-sort";
+import { Sortable } from "../../src/model/Sortable";
 
 let sort: Sortable = new CountingSort();
 

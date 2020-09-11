@@ -1,11 +1,11 @@
 import assert = require("assert");
-import { Quicksort } from '../src/sort/quick-sort';
-import { empty, distData, ascData, desData } from "../src/sort/util";
-import { Sortable } from "../src/model/Sortable";
+import { empty, distData, ascData, desData } from "../../src/sort/util";
+import { MergeSort } from "../../src/sort/merge-sort";
+import { Sortable } from "../../src/model/Sortable";
 
-let sort: Sortable = new Quicksort();
+let sort: Sortable = new MergeSort();
 
-describe('Quick sort algorithm', () => {
+describe('Merge sort algorithm', () => {
 
     it('Empty', () => {
         sort.sort(empty)
