@@ -17,25 +17,26 @@ class BST {
         };
         let current: Node = this.root;
 
-        const addSide = (side: string) => {
-            if (!current.left && side === 'left') {
+        const addLeft = () => {
+            if (!current.left) {
                 current.left = newNode;
                 return this;
-            } else if (!current.right && side === 'right') {
+            }
+            current = current.left;
+        };
+
+        const addRight = () => {
+            if (!current.right) {
                 current.right = newNode;
                 return this;
             };
-            if (side === 'left') {
-                current = current.left;
-            } else if (side === 'right') {
-                current = current.right;
-            };
+            current = current.right;
         };
 
         while (true) {
             if (val === current.value) return this;
-            if (val < current.value) addSide('left');
-            else addSide('right');
+            if (val < current.value) addLeft();
+            else addRight();
         };
     };
 };
