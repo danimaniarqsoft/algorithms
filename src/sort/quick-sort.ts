@@ -11,25 +11,24 @@ export class Quicksort implements Sortable {
      * @param {*} leftIndex 
      * @param {*} rightIndex 
      */
-    partition(arr: number[], leftIndex: number, rightIndex: number): any {
+    partition(arr: number[], leftIndex: number, rightIndex: number): number {
+        let pivotValue: number = arr[rightIndex];
+        let maxMinIndex = leftIndex - 1;
 
-        let pivot = arr[rightIndex];
-        let i = leftIndex = -1;
-
-        for (let j = leftIndex; j < rightIndex; j++) {
-            if (arr[j] < pivot) {
-                i++;
-                swap(arr, i, j);
+        for (let index = leftIndex; index < rightIndex; index++) {
+            if (arr[index] <= pivotValue) {
+                maxMinIndex = maxMinIndex + 1;
+                swap(arr, index, maxMinIndex);
             }
         }
-        i++;
-        swap(arr, i, rightIndex);
-        return i;
+        maxMinIndex = maxMinIndex + 1;
+        swap(arr, maxMinIndex, rightIndex);
+        return maxMinIndex;
     }
 
-    quicksort(arr: number[], leftIndex: number, rightIndex: number): any {
+    quicksort(arr: number[], leftIndex: number, rightIndex: number): void {
         if (leftIndex < rightIndex) {
-            let middle = this.partition(arr, leftIndex, rightIndex);
+            let middle: number = this.partition(arr, leftIndex, rightIndex);
             this.quicksort(arr, leftIndex, middle - 1);
             this.quicksort(arr, middle + 1, rightIndex);
         }

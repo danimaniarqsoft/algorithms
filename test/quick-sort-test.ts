@@ -5,7 +5,7 @@ import { Sortable } from "../src/model/Sortable";
 
 let sort: Sortable = new Quicksort();
 
-describe('Heap sort algorithm', () => {
+describe('Quick sort algorithm', () => {
 
     it('Empty', () => {
         sort.sort(empty)
