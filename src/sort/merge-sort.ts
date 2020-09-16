@@ -8,31 +8,24 @@ export class MergeSort implements Sortable {
         let leftArr = [];
         let rightArr = [];
 
-        let n1 = m - l;
-        let n2 = r - m - 1;
-
-        for (let index = 0; index <= n1; index++) {
-            leftArr[index] = arr[l + index];
+        for (let index = l; index <= m; index++) {
+            leftArr.push(arr[index]);
         }
+        leftArr.push(Number.MAX_SAFE_INTEGER);
 
-        leftArr[n1 + 1] = Number.MAX_SAFE_INTEGER;
-
-        for (let index = 0; index <= n2; index++) {
-            rightArr[index] = arr[m + index + 1];
+        for (let index = m + 1; index <= r; index++) {
+            rightArr.push(arr[index]);
         }
+        rightArr.push(Number.MAX_SAFE_INTEGER);
 
-        rightArr[n2 + 1] = Number.MAX_SAFE_INTEGER;
-
-        let i = 0;
-        let j = 0;
+        let leftIndex = 0;
+        let rightIndex = 0;
 
         for (let index = l; index <= r; index++) {
-            if (leftArr[i] <= rightArr[j]) {
-                arr[index] = leftArr[i];
-                i++;
+            if (leftArr[leftIndex] < rightArr[rightIndex]) {
+                arr[index] = leftArr[leftIndex++];
             } else {
-                arr[index] = rightArr[j];
-                j++;
+                arr[index] = rightArr[rightIndex++];
             }
         }
     }

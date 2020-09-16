@@ -9,35 +9,33 @@ class BST {
     };
 
     add(val: number) {
+        let newNode = new Node(val);
 
-        const newNode = new Node(val);
         if (!this.root) {
             this.root = newNode;
             return this;
-        };
-        let current: Node = this.root;
+        }
 
-        const addLeft = () => {
-            if (!current.left) {
-                current.left = newNode;
-                return this;
+        let currentNode = this.root;
+
+        while (currentNode) {
+            if (currentNode.value > newNode.value) {
+                if (currentNode.left) {
+                    currentNode = currentNode.left;
+                } else {
+                    currentNode.left = newNode;
+                    currentNode = null;
+                }
+            } else {
+                if (currentNode.right) {
+                    currentNode = currentNode.right;
+                } else {
+                    currentNode.right = newNode;
+                    currentNode = null;
+                }
             }
-            current = current.left;
-        };
-
-        const addRight = () => {
-            if (!current.right) {
-                current.right = newNode;
-                return this;
-            };
-            current = current.right;
-        };
-
-        while (true) {
-            if (val === current.value) return this;
-            if (val < current.value) addLeft();
-            else addRight();
-        };
+        }
+        return this;
     };
 };
 
