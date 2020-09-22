@@ -1,5 +1,7 @@
 import { Node } from "@/model/Node";
-export class TreeOperations {
+import { TreeSearch } from "@/tree-operations/search/TreeSearch";
+
+export class TreeRecursiveSearch implements TreeSearch {
 
     /**
      *  O( log(n) )

@@ -1,4 +1,4 @@
-import { Traversal } from "@/traversal/Traversal";
+import { Traversal } from "@/tree-operations/traversal/Traversal";
 import { Node } from "@/model/Node";
 
 export class InOrderTraversal implements Traversal {
