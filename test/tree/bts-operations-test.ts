@@ -17,4 +17,20 @@ describe('BST Common Operations', () => {
         assert.equal(minNode.value, 78);
     });
 
+    it('Find Succesor of 13', () => {
+        let succesor: Node = new TreeOperation().succesor(tree.root);
+        assert.equal(succesor.value, 13);
+    });
+
+    it('Find Succesor of 12', () => {
+        let three = tree.root.left.right;
+        let succesor: Node = new TreeOperation().succesor(three);
+        assert.equal(succesor.value, 12);
+    });
+
+    it('Find Succesor of 78', () => {
+        let seventyEight = tree.root.right.right;
+        let succesor: Node = new TreeOperation().succesor(seventyEight);
+        assert.equal(succesor, null);
+    });
 });

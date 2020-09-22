@@ -23,6 +23,7 @@ class BST {
                 if (currentNode.left) {
                     currentNode = currentNode.left;
                 } else {
+                    newNode.parent = currentNode;
                     currentNode.left = newNode;
                     currentNode = null;
                 }
@@ -30,6 +31,7 @@ class BST {
                 if (currentNode.right) {
                     currentNode = currentNode.right;
                 } else {
+                    newNode.parent = currentNode;
                     currentNode.right = newNode;
                     currentNode = null;
                 }
