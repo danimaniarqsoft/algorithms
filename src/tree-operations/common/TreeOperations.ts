@@ -31,21 +31,20 @@ export class TreeOperation {
             return this.findMin(node.right);
         }
 
-        let currentParent: Node = node.parent;
-        let currentChild: Node = node;
-
-        while (currentParent && currentParent.right && (currentParent.right.value === currentChild.value)) {
-            currentChild = currentParent;
-            currentParent = currentParent.parent;
+        while (node.parent && (node.parent.right === node)) {
+            node = node.parent;
         }
-        return currentParent;
+        return node.parent;
     }
 
     predecessor(node: Node): Node {
         if (node.left) {
             return this.findMax(node.left);
         }
-
+        while (node.parent && node.parent.left === node) {
+            node = node.parent
+        }
+        return node.parent;
     }
 
 }
