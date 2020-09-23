@@ -26,6 +26,11 @@ export class TreeOperation {
         return node;
     }
 
+    /**
+    * O ( h )
+    * 
+    * @param node 
+    */
     succesor(node: Node): Node {
         if (node.right) {
             return this.findMin(node.right);
@@ -37,6 +42,11 @@ export class TreeOperation {
         return node.parent;
     }
 
+    /**
+    * O ( h )
+    *
+    * @param node
+    */
     predecessor(node: Node): Node {
         if (node.left) {
             return this.findMax(node.left);
