@@ -1,29 +1,33 @@
 import { Sortable } from "@/model/Sortable";
+import { count } from "console";
 
 export class CountingSort implements Sortable {
 
     sort(arr: number[], maxNumber?: number) {
+        // build countArray with max number
+        let countArray: number[] = [];
 
-        let countArray = [];
         for (let index = 0; index <= maxNumber; index++) {
             countArray[index] = 0;
         }
-
-        for (let index = 0; index < countArray.length; index++) {
+        // counting elements in the countArray
+        for (let index = 0; index < arr.length; index++) {
             countArray[arr[index]] = countArray[arr[index]] + 1;
         }
 
+        // sum accumulative elements
         for (let index = 1; index < countArray.length; index++) {
             countArray[index] = countArray[index] + countArray[index - 1];
         }
 
-        let newArray = [];
+        let sortedArray: number[] = [];
 
         for (let index = 0; index < arr.length; index++) {
-            newArray[countArray[arr[index]] - 1] = arr[index];
+            sortedArray[countArray[arr[index]] - 1] = arr[index];
             countArray[arr[index]] = countArray[arr[index]] - 1;
         }
-        return newArray;
+        // create new Array with sorted elements
+        return sortedArray;
     }
 
 }
