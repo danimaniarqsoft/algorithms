@@ -1,5 +1,5 @@
 import assert = require("assert");
-import { empty, distData, ascData, desData } from "../../src/sort/util";
+import { empty, ascData, getData } from "../../src/sort/util";
 import { InsertionSort } from "../../src/sort/insertion-sort";
 import { Sortable } from "../../src/model/Sortable";
 
@@ -8,19 +8,19 @@ let sort: Sortable = new InsertionSort();
 describe('Insertion sort algorithm', () => {
 
     it('Empty', () => {
-        assert.deepEqual(sort.sort(empty), []);
+        assert.deepStrictEqual(sort.sort(empty), []);
     });
 
     it('Distributed', () => {
-        assert.deepEqual(sort.sort(distData), ascData);
+        assert.deepStrictEqual(sort.sort(getData('dist')), ascData);
     });
 
     it('Ascending', () => {
-        assert.deepEqual(sort.sort(ascData), ascData);
+        assert.deepStrictEqual(sort.sort(getData('asc')), ascData);
     });
 
     it('Descending', () => {
-        assert.deepEqual(sort.sort(desData), ascData);
+        assert.deepStrictEqual(sort.sort(getData('desc')), ascData);
     });
 
 });

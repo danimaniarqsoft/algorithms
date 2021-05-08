@@ -1,5 +1,5 @@
 import assert = require("assert");
-import { empty, distData, ascData, desData } from "../../src/sort/util";
+import { empty, ascData, getData } from "../../src/sort/util";
 import { HeapSort } from "../../src/sort/heap-sort";
 import { Sortable } from "../../src/model/Sortable";
 
@@ -9,22 +9,25 @@ describe('Heap sort algorithm', () => {
 
     it('Empty', () => {
         sort.sort(empty)
-        assert.deepEqual(empty, []);
+        assert.deepStrictEqual(empty, []);
     });
 
     it('Distributed', () => {
-        sort.sort(distData)
-        assert.deepEqual(distData, ascData);
+        let data = getData('dist');
+        sort.sort(data)
+        assert.deepStrictEqual(data, ascData);
     });
 
     it('Ascending', () => {
-        sort.sort(ascData)
-        assert.deepEqual(ascData, ascData);
+        let data = getData('asc');
+        sort.sort(data)
+        assert.deepStrictEqual(data, ascData);
     });
 
     it('Descending', () => {
-        sort.sort(desData)
-        assert.deepEqual(desData, ascData);
+        let data = getData('desc')
+        sort.sort(data)
+        assert.deepStrictEqual(data, ascData);
     });
 
 });

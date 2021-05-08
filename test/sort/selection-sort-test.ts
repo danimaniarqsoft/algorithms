@@ -8,19 +8,19 @@ let sort: Sortable = new SelectionSort();
 describe('Selection sort algorithm', () => {
 
     it('Empty', () => {
-        assert.deepEqual(sort.sort(empty), []);
+        assert.deepStrictEqual(sort.sort(empty), []);
     });
 
     it('Distributed', () => {
-        assert.deepEqual(sort.sort(distData), ascData);
+        assert.deepStrictEqual(sort.sort(distData), ascData);
     });
 
     it('Ascending', () => {
-        assert.deepEqual(sort.sort(ascData), ascData);
+        assert.deepStrictEqual(sort.sort(ascData), ascData);
     });
 
     it('Descending', () => {
-        assert.deepEqual(sort.sort(desData), ascData);
+        assert.deepStrictEqual(sort.sort(desData), ascData);
     });
 
 });
