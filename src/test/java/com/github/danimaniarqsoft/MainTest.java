@@ -2,6 +2,12 @@ package com.github.danimaniarqsoft;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import com.github.danimaniarqsoft.resolvers.IntArrayParameterResolver;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,43 +20,12 @@ import org.junit.jupiter.api.BeforeAll;
 @Slf4j
 class MainTest {
 
-  private Main cut;
-
-  @BeforeAll
-  static void beforeAll() {
-    log.info("Before all");
-  }
-
-  @BeforeEach
-  void setUp() {
-    log.info("beforeEach");
-    this.cut = new Main();
-  }
-
-  @Test
-  void firstTest() {
-    log.info("firstTest");
-    String input = "duke";
-    String result = cut.format(input);
-    assertEquals("DUKE", result);
-  }
-
-  @Test
-  void secondTest() {
-    log.info("secondTest");
-    String input = "duke";
-    String result = cut.format(input);
-    assertEquals("DUKE", result);
-  }
-
-  @AfterEach
-  void afterEach() {
-    log.info("afterEach");
-  }
-
-  @AfterAll
-  static void afterAll() {
-    log.info("After all");
+  @ParameterizedTest
+  @CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
+  void toUpperCase(String input, String expected) {
+    log.info("Running toLowerCase");
+    String actualValue = input.toUpperCase();
+    assertEquals(expected, actualValue);
   }
 
 }
