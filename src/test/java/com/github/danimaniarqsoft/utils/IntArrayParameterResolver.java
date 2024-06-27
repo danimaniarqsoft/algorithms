@@ -1,4 +1,4 @@
-package com.github.danimaniarqsoft.resolvers;
+package com.github.danimaniarqsoft.utils;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
