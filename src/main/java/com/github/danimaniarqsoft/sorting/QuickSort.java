@@ -1,5 +1,7 @@
 package com.github.danimaniarqsoft.sorting;
 
+import static com.github.danimaniarqsoft.utils.CommonUtils.partition;
+
 public class QuickSort implements Sort {
 
     @Override
@@ -14,25 +16,6 @@ public class QuickSort implements Sort {
             quickSort(array, leftIndex, pivotIndex - 1);
             quickSort(array, pivotIndex + 1, rightIndex);
         }
-    }
-
-    private int partition(int[] array, int leftIndex, int rightIndex) {
-        int pivotValue = array[rightIndex];
-        int current = leftIndex - 1;
-
-        for (int i = leftIndex; i < rightIndex; i++) {
-            if (array[i] < pivotValue) {
-                swap(array, ++current, i);
-            }
-        }
-        swap(array, current + 1, rightIndex);
-        return current + 1;
-    }
-
-    private void swap(int[] array, int leftIndex, int rightIndex) {
-        int temp = array[leftIndex];
-        array[leftIndex] = array[rightIndex];
-        array[rightIndex] = temp;
     }
 
 }
