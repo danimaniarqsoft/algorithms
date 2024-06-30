@@ -41,7 +41,7 @@ public class TreeUtils {
 
     }
 
-    public static void buildHeap(int[] array) {
+    public static void buildMaxHeap(int[] array) {
         int heapLength = array.length;
         for (int i = ((array.length) / 2) - 1; i >= 0; i--) {
             heapify(array, heapLength, i);
