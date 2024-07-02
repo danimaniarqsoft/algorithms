@@ -1,4 +1,4 @@
-package com.github.danimaniarqsoft;
+package com.github.danimaniarqsoft.sort;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;

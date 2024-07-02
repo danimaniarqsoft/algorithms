@@ -15,7 +15,7 @@ public class ArrayPrint {
             if (i != 0) {
                 sb.append(",");
             }
-            sb.append(i);
+            sb.append(array[i]);
         }
         sb.append("\r\n");
         log.info("Printing Array: {}", sb.toString());
