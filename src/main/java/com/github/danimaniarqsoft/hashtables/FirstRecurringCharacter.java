@@ -1,11 +1,11 @@
-package com.github.danimaniarqsoft;
+package com.github.danimaniarqsoft.hashtables;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class FirstRecurringCharacter {
 
-    public int firstRecurringCharacter(int[] array) {
+    public int process(int[] array) {
         HashMap<Integer, Integer[]> map = new HashMap<>();
         for (int i = 0; i < array.length; i++) {
             Integer[] pair = map.get(array[i]);

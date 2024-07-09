@@ -1,10 +1,10 @@
-package com.github.danimaniarqsoft;
+package com.github.danimaniarqsoft.arrays;
 
 import java.util.HashMap;
 
 public class TwoSum {
 
-    public int[] twoSum(int[] nums, int target) {
+    public int[] process(int[] nums, int target) {
         if (nums.length < 2) {
             return nums;
         }
