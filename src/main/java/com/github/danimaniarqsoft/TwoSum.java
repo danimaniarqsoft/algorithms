@@ -1,4 +1,4 @@
-package com.github.danimaniarqsoft.arrays;
+package com.github.danimaniarqsoft;
 
 import java.util.HashMap;
 

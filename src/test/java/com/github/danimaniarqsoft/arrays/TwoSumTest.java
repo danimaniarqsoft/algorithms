@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
+import com.github.danimaniarqsoft.TwoSum;
 import com.github.danimaniarqsoft.utils.ArrayPrint;
 import com.github.danimaniarqsoft.utils.StringArrayConverter;
 
