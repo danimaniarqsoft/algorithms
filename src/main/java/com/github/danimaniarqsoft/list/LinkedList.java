@@ -92,6 +92,26 @@ public class LinkedList<T> {
         return null;
     }
 
+    public LinkedList<T> reverse() {
+
+        Node<T> prev = null;
+        Node<T> current = this.head;
+        Node<T> post = current.getNext();
+        this.tail = this.head;
+
+        while (current != null) {
+            current.setNext(prev);
+            prev = current;
+            current = post;
+            if(current !=null){
+                post = current.getNext();
+            }
+        }
+        this.head = prev;
+
+        return this;
+    }
+
     public void print() {
         Node<T> current = this.head;
 
@@ -117,10 +137,9 @@ public class LinkedList<T> {
                 .prepend(-3)
                 .insert(2, 100)
                 .insert(0, -100)
-                .insert(0, -99)
-                .remove(0)
-                .remove(0)
-                ;
+                .insert(0, -99);
+        list.print();
+        list.reverse();
         list.print();
     }
 
