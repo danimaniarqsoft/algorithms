@@ -1,7 +1,5 @@
 package com.github.danimaniarqsoft.sorting;
 
-import java.util.Arrays;
-
 public class CountingSort implements Sort {
 
     @Override

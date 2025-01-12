@@ -7,7 +7,6 @@ import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
 import com.github.danimaniarqsoft.sorting.HeapSort;
-import com.github.danimaniarqsoft.utils.ArrayPrint;
 import com.github.danimaniarqsoft.utils.StringArrayConverter;
 
 class HeapSortTest {

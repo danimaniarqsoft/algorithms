@@ -1,15 +1,17 @@
 package com.github.danimaniarqsoft.graphs;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
 public class Graph {
 
-    private Map<Integer, Set<Integer>> adjacencyList = new Hashtable<>();
+    private Map<Integer, Set<Integer>> adjacencyList = new HashMap<>();
     private Integer numberOfNodes = 0;
 
     public Graph addVertex(int vertex) {
@@ -40,15 +42,14 @@ public class Graph {
     public Graph showConnections() {
 
         for (Map.Entry<Integer, Set<Integer>> set : this.adjacencyList.entrySet()) {
-            System.out.print(set.getKey() + " : ");
+            log.info(set.getKey() + " : ");
             Iterator<Integer> iterator = set.getValue().iterator();
             while (iterator.hasNext()) {
-                System.out.print(iterator.next() + ",");
+                log.info(iterator.next() + ",");
             }
-            System.out.println();
         }
 
-        System.out.println("Number of nodes : " + this.numberOfNodes);
+        log.info("Number of nodes : " + this.numberOfNodes);
 
         return this;
     }
