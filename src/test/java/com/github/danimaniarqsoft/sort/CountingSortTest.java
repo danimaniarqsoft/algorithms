@@ -13,7 +13,7 @@ class CountingSortTest {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
-    void heapify(
+    void counting(
             @ConvertWith(StringArrayConverter.class) int[] input,
             @ConvertWith(StringArrayConverter.class) int[] expected) {
         new CountingSort().sort(input);

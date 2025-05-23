@@ -22,13 +22,12 @@ public class CountingSort implements Sort {
         int[] newArray = new int[array.length];
 
         for (int i = 0; i < array.length; i++) {
-            int value = array[i];
-            int index = countingArray[value] - 1;
-            countingArray[value] = countingArray[value] - 1;
-            newArray[index] = value;
+            int index = countingArray[array[i]] - 1;
+            countingArray[array[i]] = countingArray[array[i]] - 1;
+            newArray[index] = array[i];
         }
 
-        for (int i = 0; i < newArray.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = newArray[i];
         }
     }
