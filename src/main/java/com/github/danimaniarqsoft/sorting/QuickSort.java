@@ -1,6 +1,8 @@
 package com.github.danimaniarqsoft.sorting;
 
-import static com.github.danimaniarqsoft.utils.CommonUtils.partition;
+import static com.github.danimaniarqsoft.utils.CommonUtils.swap;
+
+import java.util.Random;
 
 public class QuickSort implements Sort {
 
@@ -16,6 +18,20 @@ public class QuickSort implements Sort {
             quickSort(array, leftIndex, pivotIndex - 1);
             quickSort(array, pivotIndex + 1, rightIndex);
         }
+    }
+
+    private int partition(int[] array, int leftIndex, int rightIndex) {
+        int pivot = array[rightIndex];
+        int minIndex = leftIndex - 1;
+
+        for (int i = leftIndex; i < rightIndex; i++) {
+            if (array[i] < pivot) {
+                swap(array, i, ++minIndex);
+            }
+        }
+
+        swap(array, ++minIndex, rightIndex);
+        return minIndex;
     }
 
 }
