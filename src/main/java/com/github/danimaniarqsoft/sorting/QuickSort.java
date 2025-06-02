@@ -2,8 +2,6 @@ package com.github.danimaniarqsoft.sorting;
 
 import static com.github.danimaniarqsoft.utils.CommonUtils.swap;
 
-import java.util.Random;
-
 public class QuickSort implements Sort {
 
     @Override
