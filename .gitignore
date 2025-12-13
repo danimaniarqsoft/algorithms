@@ -21,3 +21,5 @@ algo.sh
 /dist/
 /nbdist/
 /.nb-gradle/
+
+prompt.md
