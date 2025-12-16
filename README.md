@@ -30,3 +30,16 @@ Output = [0, 1]
 
 Explanation: other valid output could be [1, 0], [0, 2], [2, 0],  [1 ,2]
 ```
+
+## Triplet sum
+
+Given an array of integers, return all triplets `[a, b, c]` such that `a + b + c = 0`. The solution must not contain duplicate triplets (eg., `[1, 2, 3]` and `[2, 3, 1]` are considered duplicate triplets). If no such triplets are found, return an empty array.
+
+Each triplet can be arranged in any order, and the output can be returned in any order.
+
+**Example**
+
+```txt
+input: nums = [0, -1, 2, -3, 1]
+Output: [[-3, 1, 2], [-1, 0, 1]]
+```
