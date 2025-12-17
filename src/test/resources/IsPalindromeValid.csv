@@ -1,0 +1,11 @@
+input,expected
+"",true
+"a",true
+"aa",true
+"ab",false
+"!,(?)",true
+"12.02.2021",true
+"21,02.2021",false
+"hello, world!",false
+"a dog! a panic in a pagoda.",true
+"oso",true
