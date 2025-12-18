@@ -5,8 +5,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import com.github.danimaniarqsoft.challenges.IsPalindromeValid;
-
 /**
  * Test suite for the IsPalindromeValid challenge.
  * This class uses JUnit 5 Parameterized Tests to validate multiple strings
