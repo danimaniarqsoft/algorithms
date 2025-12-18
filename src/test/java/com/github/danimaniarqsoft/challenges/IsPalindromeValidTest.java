@@ -1,4 +1,4 @@
-package com.github.danimaniarqsoft.arrays;
+package com.github.danimaniarqsoft.challenges;
 
 import static org.junit.Assert.assertEquals;
 

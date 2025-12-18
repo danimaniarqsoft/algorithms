@@ -1,12 +1,16 @@
 package com.github.danimaniarqsoft.arrays;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class TwoSum {
 
-    public int[] process(int[] nums, int target) {
-        if (nums.length < 2) {
-            return nums;
+    public List<int[]> process(int[] nums, int target) {
+        List<int[]> pairs = new ArrayList<>();
+
+        if (nums == null || nums.length < 2) {
+            return new ArrayList<>();
         }
 
         HashMap<Integer, Integer> maps = new HashMap<>();
@@ -16,10 +20,10 @@ public class TwoSum {
             if (maps.get(diff) == null) {
                 maps.put(nums[i], i);
             } else {
-                return new int[] { i, maps.get(diff) };
+                pairs.add(new int[] { i, maps.get(diff) });
             }
         }
 
-        return new int[0];
+        return pairs;
     }
 }
