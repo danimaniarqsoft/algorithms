@@ -1,9 +1,10 @@
-package com.github.danimaniarqsoft.challenges;
+package com.github.danimaniarqsoft.challenges.twopointers;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvFileSource;
+
 import com.github.danimaniarqsoft.utils.StringArrayConverter;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

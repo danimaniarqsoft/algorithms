@@ -1,4 +1,4 @@
-package com.github.danimaniarqsoft.challenges;
+package com.github.danimaniarqsoft.challenges.twopointers;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

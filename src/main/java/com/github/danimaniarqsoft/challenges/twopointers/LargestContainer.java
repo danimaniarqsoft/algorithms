@@ -1,4 +1,4 @@
-package com.github.danimaniarqsoft.challenges;
+package com.github.danimaniarqsoft.challenges.twopointers;
 
 /**
  * Provides a solution for the Container With Most Water problem.
