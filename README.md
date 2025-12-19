@@ -79,3 +79,20 @@ You are given an array of numbers, each representing the height of a vertical li
 Input: heights = [2, 7, 8, 3, 7, 6]
 Output; 24
 ```
+
+# Hashmaps and Sets
+
+## Pair Sum - Unsorted
+
+Given an array of integers, return the indexes of any two numbers that add up to a target. The order of the indexes in the result doesn't matter. If no pairs is found return an empty array.
+
+**Example**
+```txt
+Input: nums = [-1, 3, 4, 2], target = 3
+Output: [0, 2]
+
+Explanation: nums[0] + nums[2] = -1 + 4 = 3
+```
+
+**Constrains:**
+- The same index cannot be used twice in the result
