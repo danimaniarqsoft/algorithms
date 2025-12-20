@@ -96,3 +96,14 @@ Explanation: nums[0] + nums[2] = -1 + 4 = 3
 
 **Constrains:**
 - The same index cannot be used twice in the result
+
+## Verify Sudoku Board
+
+Given a partially completed 9x9 Sudoku board, determine if the current state of the board adheres to the rules of the game:
+- Each row and column must contain unique numbers between 1 and 9, or be empty (represented as 0)
+- Each of the nine 3x3 subgrids that compose the grid must contain unique numbers between 1 and 9, or be empty.
+
+Note: You are asked to determine whether the **current state of the board** is valid given these rules, **not** whether the board is solvable.
+
+**Constraints:**
+- Assume each integer on the board falls in the range of [0,9].
