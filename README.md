@@ -1,5 +1,3 @@
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
 [![GitHub License](https://img.shields.io/github/license/henriquesebastiao/badges?color=blue)](https://github.com/henriquesebastiao/badges/blob/main/LICENSE)
 
 

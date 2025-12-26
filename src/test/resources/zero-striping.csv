@@ -1,0 +1,7 @@
+rows,cols,input,expected,description
+2,2,"1,1,1,0","1,0,0,0",Single zero in 2x2
+3,3,"1,1,1,1,0,1,1,1,1","1,0,1,0,0,0,1,0,1",Center zero in 3x3
+3,3,"0,1,2,3,4,5,6,7,8","0,0,0,0,4,5,0,7,8",Zero at top-left
+3,4,"1,1,1,1,1,0,1,1,1,1,1,1","1,0,1,1,0,0,0,0,1,0,1,1",M x N with one zero
+2,3,"1,2,3,4,5,6","1,2,3,4,5,6",No zeros present
+2,2,"0,1,1,0","0,0,0,0",Zeros in same row and column
