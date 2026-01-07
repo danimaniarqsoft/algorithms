@@ -116,3 +116,6 @@ Note: You are asked to determine whether the **current state of the board** is v
 
 For each zero in an m x n matrix, set its entire row and column to zero in place.
 
+# Linked List
+
+ 
