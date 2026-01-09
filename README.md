@@ -118,4 +118,18 @@ For each zero in an m x n matrix, set its entire row and column to zero in place
 
 # Linked List
 
- 
+## Linked List Reversal
+
+Reverse a singly linked list
+
+**Example**
+
+```txt
+Input: nums = [1, 2, 3, 4, 5]
+Output: [5, 4, 3, 2, 1]
+
+```
+
+## Remove the Kth last Node From a Linked List
+
+Return the head of a singly linked list after removing the Kth node from the end of it.

@@ -1,0 +1,7 @@
+input,k,expected,description
+"1,2,3,4,5",2,"1,2,3,5",Remove node from the middle (4)
+"1,2,3,4,5",5,"2,3,4,5",Remove the head (K equals list length)
+"1,2,3,4,5",1,"1,2,3,4",Remove the tail (last node)
+"10",1,"",Remove only element in list
+"1,2",1,"1",Remove tail of two-element list
+"1,2",2,"2",Remove head of two-element list
