@@ -137,3 +137,31 @@ Return the head of a singly linked list after removing the Kth node from the end
 ## Linked List Intersection
 
 Return the node where two singly linked lists intersect. If the linked lists don't intersect, return null.
+
+## LRU Cache
+
+Design and implement a data structure for the Least Resently Used (LRU) Cache that support the following operations
+
+- `LRUCache(capacity: int)` Initialize an LRU Cache with the specified capacity.
+- `get(key: int) -> int`: Return the value associated with a key. Return -1 if the key doesn't exist.
+- `put(key: int, value: int) -> None`: Add a key and its value to the cache. If adding the key would result in the cache exceeding its size capacity, evict the least recently used element. If the key already exists in the cache, update its value.
+
+**Example:**
+
+Input: [put(1,100), put(2,250),get(2),put(4,300), put(3,200), get(4), get(1)], capacity = 3
+Output: [250,300,-1]
+
+**Explanation:**
+
+put(1,100) # cache is [1:100]
+put(2,250) # cache is [1:100, 2:250]
+get(2)     # return 2050
+put(4,300) # cache is [1:100, 2:250, 4:300]
+put(3,200) # cache is [2:250, 4:300, 3:200]
+get(4)     # return 300
+get(1)     # key 1 vas evicted when adding key 3 due to the capacity: return -1
+
+**Constraints:**
+
+- All keys and values are positive integers
+- The cache capacity is positive
