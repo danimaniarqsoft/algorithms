@@ -1,0 +1,7 @@
+input,loopIndex,expected,description
+"3,2,0,-4",1,true,Standard loop at index 1
+"1,2",0,true,Loop at the head
+"1",-1,false,Single element no loop
+"1",0,true,Single element self-loop
+"1,2,3,4,5",-1,false,Long linear list no loop
+"1,2,3,4,5",4,true,Tail points to itself

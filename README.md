@@ -165,3 +165,10 @@ get(1)     # key 1 vas evicted when adding key 3 due to the capacity: return -1
 
 - All keys and values are positive integers
 - The cache capacity is positive
+
+# Fast and slow pointers
+
+## Linked List Loop
+
+Given a singly linked list, determine if it contains a cyle. A cycle occurs if a node's next pointer reference an earlier node in the list, causing a loop.
+
