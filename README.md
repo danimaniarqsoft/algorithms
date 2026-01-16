@@ -172,3 +172,11 @@ get(1)     # key 1 vas evicted when adding key 3 due to the capacity: return -1
 
 Given a singly linked list, determine if it contains a cyle. A cycle occurs if a node's next pointer reference an earlier node in the list, causing a loop.
 
+## Linked List Midpoint
+
+Given a singly linked list, find and return its middle node. If there are two middle nodes, return the second one.
+
+**Constraints:**
+
+- The linked list containes at least one node.
+- The linked list containes unique values.

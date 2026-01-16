@@ -1,0 +1,6 @@
+input,expectedVal,description
+"1,2,3,4,5",3,Odd length list (exact middle)
+"1,2,3,4,5,6",4,Even length list (second middle)
+"1,2",2,Short even list (second middle)
+"10",10,Single element list
+"1,2,3",2,Short odd list
