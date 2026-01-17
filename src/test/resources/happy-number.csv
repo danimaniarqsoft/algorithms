@@ -1,0 +1,10 @@
+input,expected,description
+23,true,Standard happy number (23 -> 13 -> 10 -> 1)
+19,true,Standard happy number (19 -> 82 -> 68 -> 100 -> 1)
+1,true,Smallest happy number
+2,false,Unhappy number (2 -> 4 -> cycle)
+4,false,The core of the unhappy cycle
+7,true,Single digit happy number (7 -> 49 -> 97 -> 130 -> 10 -> 1)
+10,true,Two digit number that reaches 1 immediately
+8,false,Unhappy number entering cycle through 4
+3,false,Small odd unhappy number
