@@ -192,3 +192,19 @@ Input: n = 23
 Output: True
 Explanation: 2^2 + 3^2 = 13 => 1^2 + 3^2 = 10 => 1^2 + 0^2 = 1
 ```
+
+# Sliding Windows
+
+## Substring Anagrams
+
+Given two strings, s and t, both consistings of lowercase English letters, return the number of substriings in s that are anagrams of t.
+
+An **anagram** is a word or phrase formed by rearranging the letter of another word or phrase, using all the original letters exactly once.
+
+**Example**
+```txt
+Input: s = "caabab", t = "aba"
+Output: 2
+
+Explanation: There is an anagram of t starting at index 1 ("c*aab*ab") and another starting at index 2 ("ca*aba*b")
+```

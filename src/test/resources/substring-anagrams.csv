@@ -1,0 +1,11 @@
+s,t,expected,description
+"caabab","aba",2,Standard case (aab and aba)
+"cbaebabacd","abc",2,Anagrams at indices 0 and 6
+"abab","ab",3,Multiple overlapping anagrams (ab, ba, ab)
+"aaaaa","aa",4,Identical characters overlap
+"abcde","fgh",0,No characters match
+"a","a",1,Single character match
+"abc","abcd",0,Pattern longer than source string
+"xyz","y",1,Single character pattern in middle
+"afgghj","fgh",0,Missing character for anagram
+"raceca","race",1,Anagram at the start only
