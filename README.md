@@ -1,13 +1,103 @@
 [![GitHub License](https://img.shields.io/github/license/henriquesebastiao/badges?color=blue)](https://github.com/henriquesebastiao/badges/blob/main/LICENSE)
 
+# 🚀 The Algorithms Solution Project: Java Edition
 
-# Project Algorithms
+## Project Overview
 
-This is an algorithms project
+This repository serves as a comprehensive educational resource for mastering common algorithmic challenges and data structures. Developed with a focus on **Software Engineering excellence**, the project provides clean, well-documented Java solutions to help developers bridge the gap between theoretical knowledge and practical coding proficiency.
 
-## For run 
+The primary focus of this project is the implementation of patterns found in the acclaimed book **"Coding Interview Patterns"** by **Alex Xu & Shaun Guawardance**.
 
-Build the project and run all tests with `./mvnw package` or `mvnw.cmd package` for Windows.
+## 🧠 Why This Project?
+
+Rather than focusing on memorizing individual problems, this repository emphasizes **Pattern Recognition**. By mastering a single pattern (like the _Sliding Window_ or _Two Pointers_), you can solve dozens of related problems efficiently.
+
+### Key Patterns Included:
+
+- **Sliding Window:** For problems involving contiguous sub-arrays or strings.
+- **Two Pointers:** Optimizing $O(n^2)$ search problems to $O(n)$ time complexity.
+- **Fast & Slow Pointers:** Detecting cycles in linked lists and arrays.
+- **Merge Intervals:** Handling overlapping intervals in scheduling tasks.
+- **Tree & Graph Traversals:** BFS, DFS, and topological sorting strategies.
+
+## 📂 Project Structure
+The project follows the standard Maven layout. The logic is separated into foundational structures and pattern-based challenges:
+
+```shell
+.
+├── src
+│   ├── main
+│   │   └── java/com/github/danimaniarqsoft
+│   │       ├── arrays/             # Array-specific logic (TwoSum)
+│   │       ├── challenges/         # Coding Interview Patterns (Sliding Window, etc.)
+│   │       ├── graphs/             # Graph implementations
+│   │       ├── hashtables/         # Hash Table implementations
+│   │       ├── list/               # Linked List and Node definitions
+│   │       ├── queues/             # Queue implementations
+│   │       ├── recursion/          # Recursive problem sets
+│   │       ├── sorting/            # Sorting algorithm implementations
+│   │       ├── stack/              # Stack implementations
+│   │       ├── trees/              # Tree structures (BST)
+│   │       └── utils/              # Tree and Array helper utilities
+│   └── test
+│       ├── java/...                # JUnit 5 Test Suites
+│       └── resources/              # CSV data files for Data-Driven Testing
+├── pom.xml                         # Project dependencies and Build config
+└── mvnw                            # Maven Wrapper for consistent builds
+```
+
+## 🛠️ Tech Stack & Requirements
+
+- **Language:** Java (JDK 17+ recommended)    
+- **Build Tool:** Maven
+- **Testing Framework:** JUnit 5 (Ensuring all solutions are robust and verified)
+    
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have the Java Development Kit (JDK) and Maven installed on your machine.
+
+### Installation
+
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/danimaniarqsoft/algorithms.git
+cd algorithms
+```
+
+### Build and Run Tests
+
+To verify the solutions and ensure your environment is set up correctly, run the following command in the project root:
+
+**For Unix/macOS:**
+
+Bash
+
+```bash
+./mvnw package
+```
+
+**For Windows:**
+
+Bash
+
+```bash
+mvnw.cmd package
+```
+
+> **Note:** Running the `package` command will compile the code, run all unit tests, and generate a JAR file in the `target/` directory.
+
+---
+
+## 📚 Acknowledgments
+
+Special thanks to **Alex Xu** and **Shaun Guawardance** for their incredible work on _Coding Interview Patterns_, which provided the roadmap for these implementations.
+
+---
 
 # Two Pointers
 
@@ -195,16 +285,15 @@ Explanation: 2^2 + 3^2 = 13 => 1^2 + 3^2 = 10 => 1^2 + 0^2 = 1
 
 # Sliding Windows
 
-## Substring Anagrams
-
-Given two strings, s and t, both consistings of lowercase English letters, return the number of substriings in s that are anagrams of t.
+Given two strings, s and t, both consisting of lowercase English letters, return the number of substrings in s that are anagrams of t.
 
 An **anagram** is a word or phrase formed by rearranging the letter of another word or phrase, using all the original letters exactly once.
 
 **Example**
+
 ```txt
 Input: s = "caabab", t = "aba"
 Output: 2
-
-Explanation: There is an anagram of t starting at index 1 ("c*aab*ab") and another starting at index 2 ("ca*aba*b")
 ```
+
+**Explanation**: There is an anagram of t starting at index 1 ("c**aab**ab") and another starting at index 2 ("ca**aba**b")
