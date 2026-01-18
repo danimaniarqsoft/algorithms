@@ -33,7 +33,7 @@ public class LargestContainerTest {
 
         // 1. ACT: Instantiate the solution class and calculate the result.
         // The algorithm typically uses a Two-Pointer approach for O(n) efficiency.
-        int result = new LargestContainer().solution(input);
+        int result = new LargestContainer().maxArea(input);
 
         // 2. ASSERT: Verify that the calculated maximum area matches the expected
         // value.

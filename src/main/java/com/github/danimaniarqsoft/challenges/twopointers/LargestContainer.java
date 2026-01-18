@@ -1,64 +1,49 @@
 package com.github.danimaniarqsoft.challenges.twopointers;
 
 /**
- * Provides a solution for the Container With Most Water problem.
- * This implementation uses the Two-Pointer technique to find the maximum area
- * between two lines in an array of heights.
+ * Challenge: Find two lines that form a container that holds the most water.
+ * Pattern: Two Pointers (Greedy Convergence).
+ * * Performance:
+ * - Time Complexity: O(n) - Single pass through the array.
+ * - Space Complexity: O(1) - Constant extra space.
  */
 public class LargestContainer {
 
     /**
      * Calculates the maximum area of water a container can hold.
-     * * @param input An array where each element represents the height of a line at
-     * that index.
+     * * @param heights An array where each element represents the height of a line.
      * 
-     * @return The maximum area found; returns 0 if the input is null or has fewer
-     *         than 2 lines.
+     * @return The maximum area found.
      */
-    public int solution(int[] input) {
-
-        // 1. Edge Case: A container requires at least two lines.
-        if (input == null || input.length < 2) {
+    public int maxArea(int[] heights) {
+        if (heights == null || heights.length < 2) {
             return 0;
         }
 
-        // 2. Initialize Pointers: One at the start (left) and one at the end (right).
-        int leftIndex = 0;
-        int rightIndex = input.length - 1;
+        int left = 0;
+        int right = heights.length - 1;
+        int maxArea = 0;
 
-        int maxSize = 0;
+        while (left < right) {
+            int width = right - left;
+            int currentHeight = Math.min(heights[left], heights[right]);
 
-        // 3. Iterate until pointers meet.
-        while (leftIndex < rightIndex) {
+            // Equation: $$Area = \text{width} \times \min(h_{left}, h_{right})$$
+            maxArea = Math.max(maxArea, width * currentHeight);
 
-            // Calculate the width (distance between the two lines).
-            int base = rightIndex - leftIndex;
-
-            // Calculate the current area:
-            // The height of water is limited by the SHORTER of the two lines.
-            int currenSize = Math.min(input[leftIndex], input[rightIndex]) * base;
-
-            // Update the maximum size found so far.
-            if (currenSize > maxSize) {
-                maxSize = currenSize;
-            }
-
-            // 4. Movement Logic:
-            // To find a potentially larger area, we must move the pointer
-            // pointing to the SHORTER line, as the shorter line is the limiting factor.
-            if (input[leftIndex] < input[rightIndex]) {
-                leftIndex++;
-            } else if (input[leftIndex] > input[rightIndex]) {
-                rightIndex--;
+            // Movement Logic with Equality Optimization:
+            if (heights[left] < heights[right]) {
+                left++;
+            } else if (heights[left] > heights[right]) {
+                right--;
             } else {
-                // If heights are equal, moving both is a valid optimization
-                // because moving just one wouldn't increase the area unless
-                // the next line is significantly taller.
-                leftIndex++;
-                rightIndex--;
+                // OPTIMIZATION: When heights are equal, moving just one side
+                // cannot increase the area. We move both to save iterations.
+                left++;
+                right--;
             }
         }
 
-        return maxSize;
+        return maxArea;
     }
 }
