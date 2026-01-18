@@ -43,7 +43,7 @@ public class PairSumSortedTest {
             @ConvertWith(StringArrayConverter.class) int[] expected) {
 
         // ACT: Call the solution method with the parsed input and target.
-        int[] result = solution.solution(input, target);
+        int[] result = solution.findPair(input, target);
 
         // ASSERT: Verify that the actual result (the indices found) matches the
         // expected indices.

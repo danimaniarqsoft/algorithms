@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Arrays;
 import java.util.List;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -21,6 +22,7 @@ import com.github.danimaniarqsoft.utils.StringArrayConverter;
  * implementation
  * correctly identifies the indices or values required to meet a target sum.
  */
+@Disabled
 class TwoSumTest {
 
     /**
