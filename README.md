@@ -109,21 +109,21 @@ Given an array of integers sorted in ascending order and a target value, return 
 
 **Example 1:**
 
-```txt
+```py
 input: nums = [-5, -2, 3, 4, 6], target = 7
 Output = [2, 3]
-
-Explanation: nums[2] + num[3] = 3 + 4
 ```
+
+**Explanation:** nums[2] + num[3] = 3 + 4
 
 **Example 2:**
 
-```txt
+```py
 input: nums = [1, 1, 1], target = 2
 Output = [0, 1]
-
-Explanation: other valid output could be [1, 0], [0, 2], [2, 0],  [1 ,2]
 ```
+
+**Explanation:** other valid output could be [1, 0], [0, 2], [2, 0],  [1 ,2]
 
 ## Triplet sum
 
@@ -133,7 +133,7 @@ Each triplet can be arranged in any order, and the output can be returned in any
 
 **Example**
 
-```txt
+```py
 input: nums = [0, -1, 2, -3, 1]
 Output: [[-3, 1, 2], [-1, 0, 1]]
 ```
@@ -147,14 +147,14 @@ Given a string, determine if it's a palindrome after removing all non-alphanumer
 
 **Example 1:**
 
-```txt
+```py
 Input s = "a dog! a panic in a pagoda."
 Output: True
 ```
 
 **Example 2:**
 
-```txt
+```py
 Input s = "abc123"
 Ouput: False
 ```
@@ -169,9 +169,10 @@ The string may include a combination of lowercase English letters, numbers, spac
 You are given an array of numbers, each representing the height of a vertical line on a graph. A container can be formed with any pair of these lines, along with the x-axis of the graph. Return the amount of water which the largest container can hold.
 
 **Example**
-```txt
+
+```py
 Input: heights = [2, 7, 8, 3, 7, 6]
-Output; 24
+Output: 24
 ```
 
 # Hashmaps and Sets
@@ -181,12 +182,12 @@ Output; 24
 Given an array of integers, return the indexes of any two numbers that add up to a target. The order of the indexes in the result doesn't matter. If no pairs is found return an empty array.
 
 **Example**
-```txt
+```py
 Input: nums = [-1, 3, 4, 2], target = 3
 Output: [0, 2]
-
-Explanation: nums[0] + nums[2] = -1 + 4 = 3
 ```
+
+**Explanation:** nums[0] + nums[2] = -1 + 4 = 3
 
 **Constrains:**
 - The same index cannot be used twice in the result
@@ -214,10 +215,9 @@ Reverse a singly linked list
 
 **Example**
 
-```txt
+```py
 Input: nums = [1, 2, 3, 4, 5]
 Output: [5, 4, 3, 2, 1]
-
 ```
 
 ## Remove the Kth last Node From a Linked List
@@ -238,11 +238,14 @@ Design and implement a data structure for the Least Resently Used (LRU) Cache th
 
 **Example:**
 
+```py
 Input: [put(1,100), put(2,250),get(2),put(4,300), put(3,200), get(4), get(1)], capacity = 3
 Output: [250,300,-1]
+```
 
 **Explanation:**
 
+```py
 put(1,100) # cache is [1:100]
 put(2,250) # cache is [1:100, 2:250]
 get(2)     # return 2050
@@ -250,6 +253,7 @@ put(4,300) # cache is [1:100, 2:250, 4:300]
 put(3,200) # cache is [2:250, 4:300, 3:200]
 get(4)     # return 300
 get(1)     # key 1 vas evicted when adding key 3 due to the capacity: return -1
+```
 
 **Constraints:**
 
@@ -277,11 +281,12 @@ In number theory, a happy number is defined as a number that, when repeatedly su
 
 **Example:**
 
-```txt
+```py
 Input: n = 23
 Output: True
-Explanation: 2^2 + 3^2 = 13 => 1^2 + 3^2 = 10 => 1^2 + 0^2 = 1
 ```
+
+**Explanation:** $2^2 + 3^2 = 13$ => $1^2 + 3^2 = 10$ => $1^2 + 0^2 = 1$
 
 # Sliding Windows
 
@@ -293,7 +298,7 @@ An **anagram** is a word or phrase formed by rearranging the letter of another w
 
 **Example**
 
-```txt
+```py
 Input: s = "caabab", t = "aba"
 Output: 2
 ```
@@ -313,3 +318,15 @@ Output: 3
 ```
 
 **Explanation:** Substring "abc" is the longest substring of length 3 that contains unique characters ("cba" also fits this description).
+
+## Longest Uniform Substring After Replacements
+
+A uniform substring is one in which all characters are identical. Given a string, determine the `length` of the longest uniform substring that can be formed by **replacing up to k characters**.
+
+**Example:**
+```py
+Input: s = 'aabcdcca', k = 2
+Output: 5
+```
+
+**Explanation:** if we can only replace 2 characters, the longest uniform substring we can achieve is "ccccc", obtained by replacing 'b' and 'd' with 'c'.
