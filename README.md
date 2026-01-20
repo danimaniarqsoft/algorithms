@@ -285,6 +285,8 @@ Explanation: 2^2 + 3^2 = 13 => 1^2 + 3^2 = 10 => 1^2 + 0^2 = 1
 
 # Sliding Windows
 
+## Substring Anagrams
+
 Given two strings, s and t, both consisting of lowercase English letters, return the number of substrings in s that are anagrams of t.
 
 An **anagram** is a word or phrase formed by rearranging the letter of another word or phrase, using all the original letters exactly once.
@@ -297,3 +299,17 @@ Output: 2
 ```
 
 **Explanation**: There is an anagram of t starting at index 1 ("c**aab**ab") and another starting at index 2 ("ca**aba**b")
+
+
+## Longest Substring With Unique Characters
+
+Given a string, determine the length of its longest substring that consists only of unique characters.
+
+**Example:**
+
+```py
+Input: s = 'abcba'
+Output: 3
+```
+
+**Explanation:** Substring "abc" is the longest substring of length 3 that contains unique characters ("cba" also fits this description).

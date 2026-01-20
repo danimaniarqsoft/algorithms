@@ -1,0 +1,11 @@
+input,expected,description
+"abcba",3,Standard case with repeats (abc)
+"bbbbb",1,All characters identical
+"pwwkew",3,Repeating chars with a gap (wke)
+"",0,Empty string
+" ",1,Single space character
+"au",2,All unique characters
+"dvdf",3,Harder case: repeat is in the middle (vdf)
+"abba",2,Two distinct pairs
+"abcdefg",7,Full string is unique
+"aabacbebe",4,Longest sequence in middle (acbe)
