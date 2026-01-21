@@ -1,0 +1,11 @@
+input,k,expected,description
+"aabcdcca",2,5,Standard case (replacing b and d with c)
+"ABAB",2,4,Replacing all to make it uniform
+"AABABBA",1,4,Replacing one char to get AAAA or BBBB
+"AAAA",2,4,Already uniform
+"ABCDE",1,2,All unique; can only make a pair
+"ABCDE",5,5,k is greater than length
+"BAAA",0,3,k is zero; no replacements allowed
+"",2,0,Empty string
+"ABAA",0,2,No replacements; two 'A's at the end
+"AABACB",1,4,Best option is 'AABA' (replace B at index 2)
