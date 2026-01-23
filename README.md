@@ -330,3 +330,28 @@ Output: 5
 ```
 
 **Explanation:** if we can only replace 2 characters, the longest uniform substring we can achieve is "ccccc", obtained by replacing 'b' and 'd' with 'c'.
+
+
+## Find the Insertion Index
+
+You are given a sorted array that contains unique values, along with an integer target.
+
+- If the array contains the target value, return its index.
+- Otherwise, return the insertion index. This is the index where the target would be if it were inserted in order, maintaining the sorted sequence of the array.
+
+**Example 1:**
+
+```py
+Input: nums = [1, 2, 4, 5, 7, 8, 9], target = 4
+Output: 2
+```
+
+**Example 2:**
+
+```py
+Input: nums = [1, 2, 4, 5, 7, 8, 9], target = 6
+Output: 4
+```
+
+**Explanation:** 6 would be inserted at index 4 to be positioned between 5 and 7: `[1, 2, 4, 5, 6, 7, 8, 9]`.
+
