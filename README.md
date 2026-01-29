@@ -355,3 +355,16 @@ Output: 4
 
 **Explanation:** 6 would be inserted at index 4 to be positioned between 5 and 7: `[1, 2, 4, 5, 6, 7, 8, 9]`.
 
+
+## First and Last Occurrences of a Number
+
+Given an array of integers sorted in non-decreasing order, return the first and last indexes of a target number. If the target is not found, return [-1, -1] .
+
+Example 1:
+```py
+Input: nums = [1, 2, 3, 4, 4, 4, 5, 6, 7, 8, 9, 10, 11],
+       target = 4
+Output: [3, 5]
+```
+
+Explanation: The first and last occurrences of number 4 are indexes 3 and 5, respectively.

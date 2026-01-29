@@ -1,0 +1,10 @@
+input_array,target,expected_output,description
+"1,2,3,4,4,4,5,6,7,8,9,10,11",4,"3,5",Multiple occurrences in the middle
+"5,7,7,8,8,10",8,"3,4",Two occurrences
+"5,7,7,8,8,10",6,"-1,-1",Target not present
+"2,2,2,2,2",2,"0,4",All elements are target
+"1,2,3,4,5",5,"4,4",Single occurrence at the end
+"1,2,3,4,5",1,"0,0",Single occurrence at the start
+"1",1,"0,0",Single element array (match)
+"1",2,"-1,-1",Single element array (no match)
+"",5,"-1,-1",Empty array
