@@ -1,0 +1,9 @@
+heights,k,expected_h,description
+"2,6,3,8",7,3,Standard case from example
+"10,20,15,10",15,10,Result is one of the tree heights
+"10,20,15,10",10,12,Result is not a tree height
+"4,4,4,4",4,3,Identical trees
+"1,2,3,4,5",15,0,Must cut everything to reach k
+"5,10,15",1,14,Need very little wood
+"100,100",100,50,Large heights
+"10,20",1,19,Minimum k requirement
