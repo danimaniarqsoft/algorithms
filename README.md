@@ -192,6 +192,11 @@ Output: [0, 2]
 **Constrains:**
 - The same index cannot be used twice in the result
 
+**Solution**
+
+- [Implementation](src/main/java/com/github/danimaniarqsoft/challenges/twopointers/PairSumSorted.java)
+- [Tests](src/test/java/com/github/danimaniarqsoft/challenges/twopointers/PairSumSortedTest.java)
+
 ## Verify Sudoku Board
 
 Given a partially completed 9x9 Sudoku board, determine if the current state of the board adheres to the rules of the game:
