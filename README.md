@@ -412,3 +412,28 @@ Output: 2
 
 - [Implementation](src/main/java/com/github/danimaniarqsoft/challenges/binarysearch/RotatedSearch.java)
 - [Tests](src/test/java/com/github/danimaniarqsoft/challenges/binarysearch/RotatedSortedSearchTest.java)
+
+
+# Stacks
+
+## Valid Parenthesis Expression
+
+Given a string representing an expression of parentheses containing the characters `(`, `)`, `[`, `]`, `{`, or `}`, determine if the expression forms a valid sequence of parentheses.
+
+A sequence of parentheses is valid if every opening parenthesis has a corresponding closing parenthesis, and no closing parenthesis appears before its matching opening parenthesis.
+
+Example 1:
+
+```py
+Input: s = '([]{})'
+Output: True
+```
+
+Example 2:
+
+```py
+Input: s = '([]{)}'
+Output: False
+```
+
+Explanation: The `(` parenthesis is closed before its nested `{` parenthesis is closed.

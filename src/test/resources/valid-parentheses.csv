@@ -1,0 +1,13 @@
+input_string,expected_output,description
+"()",true,Simple valid pair
+"([]{})",true,Nested valid pairs
+"([]{)}",false,Incorrect nesting (overlapping)
+"(]",false,Mismatched types
+"([)]",false,Mismatched order
+"((",false,Open but never closed
+"))",false,Closed but never opened
+"{[]}",true,Valid nesting
+"",true,Empty string is considered valid
+"[",false,Single opening bracket
+"]",false,Single closing bracket
+"()[]{}",true,Sequential valid pairs
