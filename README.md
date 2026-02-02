@@ -192,7 +192,7 @@ Output: [0, 2]
 **Constrains:**
 - The same index cannot be used twice in the result
 
-**Solution**
+### Solution
 
 - [Implementation](src/main/java/com/github/danimaniarqsoft/challenges/twopointers/PairSumSorted.java)
 - [Tests](src/test/java/com/github/danimaniarqsoft/challenges/twopointers/PairSumSortedTest.java)
@@ -394,3 +394,21 @@ Output: 3
 **Constraints:**
 - It's always possible to attain at least k meters of wood.
 - There's at least one tree.
+
+## Find the Target in a Rotated Sorted Array
+
+A rotated sorted array is an array of numbers sorted in ascending order, in which a portion of the array is moved from the beginning to the end. For example, a possible rotation of [1, 2, 3, 4, 5] is [3, 4, 5, 1, 2] , where the first two numbers are moved to the end.
+
+Given a rotated sorted array of unique numbers, return the index of a target value. If the target value is not present, return -1.
+
+Example:
+
+```py
+Input: nums = [8, 9, 1, 2, 3, 4, 5, 6, 7], target = 1
+Output: 2
+```
+
+### Solution
+
+- [Implementation](src/main/java/com/github/danimaniarqsoft/challenges/binarysearch/RotatedSearch.java)
+- [Tests](src/test/java/com/github/danimaniarqsoft/challenges/binarysearch/RotatedSortedSearchTest.java)
