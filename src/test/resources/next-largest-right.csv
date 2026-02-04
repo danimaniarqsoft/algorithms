@@ -1,0 +1,9 @@
+input_array,expected_output,description
+"5,2,4,6,1","6,4,6,-1,-1",Example case
+"1,2,3,4,5","2,3,4,5,-1",Strictly increasing
+"5,4,3,2,1","-1,-1,-1,-1,-1",Strictly decreasing
+"3,3,3,3","-1,-1,-1,-1",All identical elements
+"1,5,2,4,3","5,-1,4,-1,-1",Mixed peaks
+"10","-1",Single element
+"1,10,1","10,-1,-1",Peak in the middle
+"", "",Empty array

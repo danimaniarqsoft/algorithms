@@ -442,3 +442,22 @@ Explanation: The `(` parenthesis is closed before its nested `{` parenthesis is 
 
 - [Implementation](src/main/java/com/github/danimaniarqsoft/challenges/stack/ParenthesesValidator.java)
 - [Tests](src/test/java/com/github/danimaniarqsoft/challenges/stack/ValidParenthesesTest.java)
+
+
+
+## Next Largest Number to the Right
+
+Given an integer array nums, return an output array res where, for each value `nums[i]`, `res[i]` is the first number to the right that's larger than `nums[i]`. If no larger number exists to the right of `nums[i]`, set `res[i]` to `‐1`.
+
+Example:
+
+```py
+Input: nums = [5, 2, 4, 6, 1]
+Output: [6, 4, 6, -1, -1]
+```
+
+
+### Solution
+
+- [Implementation](src/main/java/com/github/danimaniarqsoft/challenges/stack/NextLargestFinder.java)
+- [Tests](src/test/java/com/github/danimaniarqsoft/challenges/stack/NextLargestRightTest.java)
