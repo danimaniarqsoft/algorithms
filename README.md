@@ -461,3 +461,15 @@ Output: [6, 4, 6, -1, -1]
 
 - [Implementation](src/main/java/com/github/danimaniarqsoft/challenges/stack/NextLargestFinder.java)
 - [Tests](src/test/java/com/github/danimaniarqsoft/challenges/stack/NextLargestRightTest.java)
+
+
+## Evaluate Expression
+
+Given a string representing a mathematical expression containing integers, parentheses, addition, and subtraction operators, evaluate and return the result of the expression.
+
+Example:
+
+```py
+Input: s = '18-(7+(2-4))'
+Output: 13
+```

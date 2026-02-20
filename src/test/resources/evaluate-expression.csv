@@ -1,0 +1,9 @@
+input_string,expected_output,description
+"18-(7+(2-4))",13,Example case (Nested parentheses)
+"1+1",2,Simple addition
+"2-1+2",3,Expression with spaces
+"(1+(4+5+2)-3)+(6+8)",23,Multiple nested groups
+"10-(2+3)",5,Simple subtraction with group
+"-2+5",3,Leading negative number
+"(5-(1+(5)))",-1,Deeply nested subtraction
+"123",123,Single multi-digit number
